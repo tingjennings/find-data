@@ -19,7 +19,7 @@ contents = soup.find_all('a', class_='boost-pfs-filter-product-item-title')
 
 f = open("result2.txt", "w", encoding="utf-8")
 for content in contents:
-   f.write(content.string)
-print(content.string)
+   f.write(content.string +'\n' )
+   print(content.string)
 
 f.close()

@@ -17,18 +17,9 @@ from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'html.parser')
 contents = soup.find_all('a', class_='boost-pfs-filter-product-item-title')
 
-f = open("result2.txt", "w", encoding="utf-8")
-for content in contents:
-   f.write(content.string)
-print(content.string)
-
-
-f.close()
 f = open("result.txt", "w", encoding="utf-8")
 for content in contents:
   if (content.a != None):
      f.write(content.a.get('aria-label'))
-
-
 
 f.close()
