@@ -15,9 +15,9 @@ html[:60]
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html, 'html.parser')
-contents = soup.find_all('a', class_='boost-pfs-filter-product-item-title')
+contents = soup.find_all('h3')
 
-f = open("result.txt", "w", encoding="utf-8")
+f = open("fieldcraftsurvival result.txt", "w", encoding="utf-8")
 for content in contents:
   if (content.a != None):
      f.write(content.a.get('aria-label'))
